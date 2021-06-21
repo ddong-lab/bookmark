@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Bookmark 삭제 확인{% endblock %}
+
+{% block content %}
+<form action="" method="post">
+      {% csrf_token %}
+      <div class="alert alert-danger">Bookmark "{{ object }}"를 정말로 지울까요?</div>
+      <input type="submit" value="삭제" class="btn btn-danger">
+</form>
+{% endblock %}
